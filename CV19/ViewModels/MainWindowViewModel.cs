@@ -18,18 +18,6 @@ namespace CV19.ViewModels
 
         public ObservableCollection<Group> Groups { get; }
 
-        public object[] CompositeCollection { get; }
-
-        #region SelectedCompositeValue : object - Выбранный непонятный элемент
-
-        /// <summary>Выбранный непонятный элемент</summary>
-        private object _SelectedCompositeValue;
-
-        /// <summary>Выбранный непонятный элемент</summary>
-        public object SelectedCompositeValue { get => _SelectedCompositeValue; set => Set(ref _SelectedCompositeValue, value); }
-
-        #endregion
-
         #region SelectedGroup : Group - Выбранная группа
 
         /// <summary>Выбранная группа</summary>
@@ -117,7 +105,7 @@ namespace CV19.ViewModels
 
         #region Заголовок окна
 
-        private string _Title = "Анализ статистики CV19";
+        private string _Title = "Student manager";
 
         /// <summary>Заголовок окна</summary>
         public string Title
@@ -257,15 +245,15 @@ namespace CV19.ViewModels
 
             Groups = new ObservableCollection<Group>(groups);
 
-            var data_list = new List<object>();
+            //var data_list = new List<object>();
 
-            data_list.Add("Helo World!");
-            data_list.Add(42);
-            var group = Groups[1];
-            data_list.Add(group);
-            data_list.Add(group.Students[0]);
+            //data_list.Add("Helo World!");
+            //data_list.Add(42);
+            //var group = Groups[1];
+            //data_list.Add(group);
+            //data_list.Add(group.Students[0]);
 
-            CompositeCollection = data_list.ToArray();
+            //CompositeCollection = data_list.ToArray();
 
             _SelectedGroupStudents.Filter += OnStudentFiltred;
         }
