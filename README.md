@@ -1,0 +1,2 @@
+# StudentManagerWPF
+WPF Educationla project.
